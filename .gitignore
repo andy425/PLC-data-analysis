@@ -151,6 +151,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+git remote add origin https://github.com/<your‑username>/<your-repo>.git
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
