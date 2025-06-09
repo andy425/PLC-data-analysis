@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PLC Cycle Times</title>
+    <style>
+      table { border-collapse: collapse; width: 50%; margin: 20px auto; }
+      th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align:center">PLC Cycle Times</h1>
+    <table>
+      <tr>
+        <th>Timestamp</th>
+        <th>Cell</th>
+        <th>Cycle Time</th>
+      </tr>
+      {% for ct in cycle_times %}
+      <tr>
+        <td>{{ ct.timestamp }}</td>
+        <td>{{ ct.cell }}</td>
+        <td>{{ ct.cycle_time }}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="2"><strong>Average</strong></td>
+        <td>{{ average }}</td>
+      </tr>
+    </table>
+  </body>
+</html>
